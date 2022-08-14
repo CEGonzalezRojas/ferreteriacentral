@@ -5,8 +5,9 @@
     --color-whatsapp:#25D366;
     --color-phone:#FF5A5F;
     --bg-color: #45bca8;
-    --bg-color-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(69,188,168,.5) 100%);
-    --bg-color-gradient-footer: linear-gradient(180deg, rgba(69,188,168,.5) 0%, rgba(69,188,168,.8)  100%);
+    --bg-color-75percent: rgba(69,188,168,.75);
+    --bg-color-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(69,188,168,.75) 100%);
+    --bg-color-gradient-footer: linear-gradient(180deg, rgba(69,188,168,.75) 0%, rgba(69,188,168,.9)  100%);
 }
 
 html{
@@ -46,8 +47,21 @@ Contenedores. Se especifica para main como una clase para todo el conjunto de co
     z-index: -1;
 }
 
+.container.others::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--bg-color-75percent);
+    z-index: -1;
+}
+
 .container.footer{
-    padding: 150px 0px;
+    padding: 25px 0px;
+    color: white;
+    text-shadow: 2px 2px rgb(0,0,0,.2);
 }
 
 .container.footer::before{
@@ -111,6 +125,19 @@ Contenedor de redes sociales
 
 .social-media-container > div.phone:hover{
     color: var(--color-phone);
+}
+
+/* Mapa de Google */
+.container.map{
+    justify-content: inherit;
+    padding: 0px;
+}
+
+.container.map > iframe{
+    margin-top: 10px;
+    width: 800px;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0,0,0,.2);
 }
 
 /* Parrafos y titulos */
