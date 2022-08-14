@@ -140,6 +140,7 @@ Contenedor de redes sociales
     width: 800px;
     border-radius: 10px;
     box-shadow: 10px 10px rgba(0,0,0,.2);
+    border: 2px solid rgba(255,255,255,1);
 }
 
 /* Parrafos y titulos */
@@ -180,6 +181,7 @@ Contenedor de redes sociales
     background: var(--bg-color);
     border-radius: 64px;
     box-shadow: 5px 5px rgb(0,0,0,.1);
+    border: 2px solid rgba(255,255,255,1);
 }
 
 .featured > div > .icon {
