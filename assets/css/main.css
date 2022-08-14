@@ -484,6 +484,10 @@ Contenedor de redes sociales
     .subtitle.white::before, .subtitle.white::after{
         content: none;
     }
+
+    .container.footer{
+        font-size: 0.8em;
+    }
     
 }
 
