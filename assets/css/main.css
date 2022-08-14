@@ -32,6 +32,11 @@ body.ready{
     opacity: 1;
 }
 
+a,a:visited,a:focus,a:hover{
+    color: inherit;
+    text-decoration: none;
+}
+
 /*
 Contenedores. Se especifica para main como una clase para todo el conjunto de contenedores con informacion de la ferre
 */
@@ -307,6 +312,7 @@ Contenedor de redes sociales
     align-items: center;
     font-size: 3em;
     height: 64px;
+    color: white;
 }
 
 .button > .text{
@@ -315,6 +321,7 @@ Contenedor de redes sociales
     justify-content: center;
     align-items: center;
     text-align: center;
+    color: white;
 }
 
 .button > .text > :last-child{
