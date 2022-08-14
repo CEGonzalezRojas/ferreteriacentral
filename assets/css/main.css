@@ -5,7 +5,8 @@
     --color-whatsapp:#25D366;
     --color-phone:#FF5A5F;
     --bg-color: #45bca8;
-    --bg-color-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, #45bca8 70%);
+    --bg-color-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(69,188,168,.5) 100%);
+    --bg-color-gradient-footer: linear-gradient(180deg, rgba(69,188,168,.5) 0%, rgba(69,188,168,.8)  100%);
 }
 
 body{
@@ -23,12 +24,11 @@ Contenedores. Se especifica para main como una clase para todo el conjunto de co
     justify-items: center;
     align-items: center;
     align-content: center;
-    margin-top: 5%;
+    padding: 150px 0px;
 }
 
 .container.main{
     min-height: 100vh;
-    opacity: 0.5;
 }
 
 .container.main::before{
@@ -42,6 +42,22 @@ Contenedores. Se especifica para main como una clase para todo el conjunto de co
     background: var(--bg-color-gradient);
 }
 
+.container.footer{
+    padding: 150px 0px;
+}
+
+.container.footer::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--bg-color);
+    background: var(--bg-color-gradient-footer);
+}
+
+/* Estilos para el logo */
 .logo{
     background-image: url(/assets/images/logotipo.png);
     width: 512px;
@@ -57,8 +73,7 @@ Contenedor de redes sociales
     gap: 10px;
     position: fixed;
     top: 20px;
-    right: 20px
-
+    right: 20px;
 }
 
 .social-media-container > div{
