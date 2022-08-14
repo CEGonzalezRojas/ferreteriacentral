@@ -20,7 +20,7 @@ import LazyLoad from "./lazyLoad.js";
       
         // Background
         const bgHTML = document.querySelector("body");
-        this.lazyLoad.observe( "/assets/images/background.jpg", bgHTML, "background",
+        this.lazyLoad.observe( "/ferreteriacentral/assets/images/background.jpg", bgHTML, "background",
             () => {
                 bgHTML.classList.add("ready");
             }
@@ -28,7 +28,7 @@ import LazyLoad from "./lazyLoad.js";
 
         // Logo
         const logoHTML = document.querySelector(".logo");
-        this.lazyLoad.observe( "/assets/images/logotipo.png", logoHTML, "background",
+        this.lazyLoad.observe( "/ferreteriacentral/assets/images/logotipo.png", logoHTML, "background",
           () => {
                 logoHTML.classList.add("ready");
           }
