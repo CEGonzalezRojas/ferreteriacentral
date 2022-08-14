@@ -4,19 +4,42 @@
     --color-instagram:#F77737;
     --color-whatsapp:#25D366;
     --color-phone:#FF5A5F;
+    --bg-color: #45bca8;
+    --bg-color-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, #45bca8 70%);
 }
 
 body{
+    margin: 0;
     background-image: url(/assets/images/background.jpg);
 }
 
+/*
+Contenedores. Se especifica para main como una clase para todo el conjunto de contenedores con informacion de la ferre
+*/
 .container{
+    position: relative;
     display: grid;
     justify-content: center;
     justify-items: center;
     align-items: center;
     align-content: center;
-    margin: 10% 0px;
+    margin-top: 5%;
+}
+
+.container.main{
+    min-height: 100vh;
+    opacity: 0.5;
+}
+
+.container.main::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: var(--bg-color);
+    background: var(--bg-color-gradient);
 }
 
 .logo{
