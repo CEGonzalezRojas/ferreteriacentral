@@ -69,7 +69,7 @@ Contenedores. Se especifica para main como una clase para todo el conjunto de co
 }
 
 .container.footer{
-    padding-top: 100px;
+    padding-top: 150px;
     padding-bottom: 50px;
     color: white;
     text-shadow: 2px 2px rgb(0,0,0,.2);
@@ -335,4 +335,41 @@ Contenedor de redes sociales
 
 .button.phone:hover::before{
     background-color: var(--color-phone-hover);
+}
+
+.container.footer > .buttons-container{
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.container.footer .button{
+    position: relative;
+    box-shadow: none;
+    padding: 0;
+    border: none;
+    grid-template-columns: auto auto;
+    border-radius: 0;
+}
+
+.container.footer .button:hover{
+    transform: none;
+    box-shadow: none;
+}
+
+.container.footer .button > .icon{
+    height: auto;
+    font-size: 2em;
+}
+
+.container.footer .button > .text{
+    grid-template-columns: auto auto;
+}
+
+.container.footer .button > .text > :last-child{
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.container.footer .button::before{
+    content: none;
 }
