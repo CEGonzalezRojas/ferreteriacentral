@@ -1,0 +1,71 @@
+:root{
+    /* Colores */
+    --color-facebook: #4267B2;
+    --color-instagram:#F77737;
+    --color-whatsapp:#25D366;
+    --color-phone:#FF5A5F;
+}
+
+body{
+    background-image: url(/assets/images/background.jpg);
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    margin: 10% 0px;
+}
+
+.logo{
+    background-image: url(/assets/images/logotipo.png);
+    width: 512px;
+    height: 424px;
+}
+
+/*
+Contenedor de redes sociales
+*/
+.social-media-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    position: fixed;
+    top: 20px;
+    right: 20px
+
+}
+
+.social-media-container > div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    border-radius: 32px;
+    cursor: pointer;
+    transition: font-size 0.1s ease-in-out, color 0.2s ease-in-out;
+    color: black;
+}
+
+.social-media-container > div:hover{
+    font-size: 1.1em;
+}
+
+.social-media-container > div.whatsapp:hover{
+    color: var(--color-whatsapp);
+}
+
+.social-media-container > div.instagram:hover{
+    color: var(--color-instagram);
+}
+
+.social-media-container > div.facebook:hover{
+    color: var(--color-facebook);
+}
+
+.social-media-container > div.phone:hover{
+    color: var(--color-phone);
+}
