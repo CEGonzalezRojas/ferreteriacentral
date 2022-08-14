@@ -9,12 +9,13 @@
     --bg-color: #45bca8;
     --bg-color-75percent: rgba(69,188,168,.75);
     --bg-color-gradient: linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(69,188,168,.75) 100%);
-    --bg-color-gradient-footer: linear-gradient(180deg, rgba(69,188,168,.75) 0%, rgba(69,188,168,.9)  100%);
+    --bg-color-gradient-footer: linear-gradient(180deg, rgba(69,188,168,.75) 0%, #008080  100%);
     --subtitle-title-gradient-left: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
     --subtitle-title-gradient-right: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
     --subtitle-title-gradient-white-left: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
     --subtitle-title-gradient-white-right: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
     --white-text-shadow: 2px 2px rgb(0 0 0 / 25%);
+    --black-text-shadow: 2px 2px rgb(255 255 255 / 40%);
 }
 
 html{
@@ -68,7 +69,8 @@ Contenedores. Se especifica para main como una clase para todo el conjunto de co
 }
 
 .container.footer{
-    padding: 25px 0px;
+    padding-top: 100px;
+    padding-bottom: 50px;
     color: white;
     text-shadow: 2px 2px rgb(0,0,0,.2);
 }
@@ -99,7 +101,7 @@ Contenedor de redes sociales
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 20px;
 }
@@ -114,6 +116,7 @@ Contenedor de redes sociales
     cursor: pointer;
     transition: font-size 0.1s ease-in-out, color 0.2s ease-in-out;
     color: black;
+    text-shadow: var(--black-text-shadow);
 }
 
 .social-media-container > div:hover{
@@ -134,6 +137,18 @@ Contenedor de redes sociales
 
 .social-media-container > div.phone:hover{
     color: var(--color-phone);
+}
+
+.container.footer > .social-media-container{
+    position: relative;
+    top: auto;
+    left: auto;
+    margin-bottom: 20px;
+}
+
+.container.footer > .social-media-container > div{
+    color: white;
+    text-shadow: var(--white-text-shadow);
 }
 
 /* Mapa de Google */
