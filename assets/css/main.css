@@ -148,9 +148,45 @@ Contenedor de redes sociales
     margin: 50px 0px;
 }
 
+.subtitle{
+    font-size: 1.3em;
+    font-weight: 800;
+    text-align: center;
+    margin: 50px 0px;
+}
+
+
 .description{
     font-size: 1.2em;
-    font-weight: 600;
     text-align: center;
     margin: 5px;
+}
+
+/* Destacados */
+.featured{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.featured > div {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 10px;
+    align-items: center;
+}
+
+.featured > div > .icon {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    background: rgba(255,255,255,.5);
+    height: 64px;
+    border-radius: 64px;
+}
+
+.featured > div > .text {
+    font-size: 1.2em;
+    font-weight: 600;
 }
