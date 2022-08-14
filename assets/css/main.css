@@ -165,23 +165,26 @@ Contenedor de redes sociales
 /* Destacados */
 .featured{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
 }
 
 .featured > div {
     display: grid;
     grid-template-columns: 64px 1fr;
-    gap: 10px;
+    justify-content: center;
     align-items: center;
+    color: white;
+    background: var(--bg-color);
+    border-radius: 64px;
+    box-shadow: 5px 5px rgb(0,0,0,.1);
 }
 
 .featured > div > .icon {
     display: grid;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
-    background: rgba(255,255,255,.5);
+    font-size: 1.5em;
     height: 64px;
     border-radius: 64px;
 }
@@ -189,4 +192,5 @@ Contenedor de redes sociales
 .featured > div > .text {
     font-size: 1.2em;
     font-weight: 600;
+    padding-right: 32px;
 }
