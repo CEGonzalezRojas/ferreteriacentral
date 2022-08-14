@@ -90,6 +90,9 @@ Contenedores. Se especifica para main como una clase para todo el conjunto de co
 /* Estilos para el logo */
 .logo{
     background-image: url(/assets/images/logotipo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     width: 512px;
     height: 424px;
 }
@@ -372,4 +375,15 @@ Contenedor de redes sociales
 
 .container.footer .button::before{
     content: none;
+}
+
+/* Responsivo */
+@media(max-width: 640px){
+
+    .logo{
+        width: calc(100% - 128px);
+        height: calc(100vw - 128px);
+        padding: 0px 64px;
+    }
+
 }
