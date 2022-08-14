@@ -8,8 +8,12 @@
     --color-phone-hover: #0076ba;
     --bg-color: #45bca8;
     --bg-color-75percent: rgba(69,188,168,.75);
-    --bg-color-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(69,188,168,.75) 100%);
+    --bg-color-gradient: linear-gradient(180deg, rgba(255,255,255,0) 50%, rgba(69,188,168,.75) 100%);
     --bg-color-gradient-footer: linear-gradient(180deg, rgba(69,188,168,.75) 0%, rgba(69,188,168,.9)  100%);
+    --subtitle-title-gradient-left: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    --subtitle-title-gradient-right: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    --subtitle-title-gradient-white-left: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+    --subtitle-title-gradient-white-right: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
 }
 
 html{
@@ -31,13 +35,15 @@ Contenedores. Se especifica para main como una clase para todo el conjunto de co
     justify-items: center;
     align-items: center;
     align-content: center;
-    padding: 125px 50px;
+    padding: 0px 50px;
 }
 
-.container.main{
+.container:first-child{
+    padding-top: 125px;
+    padding-bottom: 125px;
 }
 
-.container.main::before{
+.container:first-child::before{
     content: "";
     position: absolute;
     top: 0;
@@ -152,12 +158,50 @@ Contenedor de redes sociales
 }
 
 .subtitle{
-    font-size: 1.3em;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    font-size: 1.5em;
     font-weight: 800;
     text-align: center;
     margin: 50px 0px;
 }
 
+.subtitle.white{
+    color: white;
+}
+
+.subtitle::before, .subtitle::after{
+    content: "";
+    height: 4px;
+    border-radius: 4px;
+    background-color: black;
+}
+
+.subtitle.white::before, .subtitle.white::after{
+    content: "";
+    height: 4px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.subtitle::before{
+    background: var(--subtitle-title-gradient-left);
+}
+
+.subtitle::after{
+    background: var(--subtitle-title-gradient-right);
+}
+
+.subtitle.white::before{
+    background: var(--subtitle-title-gradient-white-left);
+}
+
+.subtitle.white::after{
+    background: var(--subtitle-title-gradient-white-right);
+}
 
 .description{
     font-size: 1.2em;
@@ -170,32 +214,31 @@ Contenedor de redes sociales
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    margin: 50px;
 }
 
 .featured > div {
     display: grid;
-    grid-template-columns: 64px 1fr;
     justify-content: center;
     align-items: center;
     color: white;
-    background: var(--bg-color);
-    border-radius: 64px;
-    box-shadow: 5px 5px rgb(0,0,0,.1);
-    border: 2px solid rgba(255,255,255,1);
+    width: 192px;
+    padding: 10px 32px;
+    text-shadow: 2px 2px rgb(0 0 0 / 20%);
 }
 
 .featured > div > .icon {
     display: grid;
     justify-content: center;
     align-items: center;
-    font-size: 1.5em;
-    height: 64px;
+    height: 128px;
+    font-size: 6em;
 }
 
 .featured > div > .text {
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 600;
-    padding-right: 32px;
+    text-align: center;
 }
 
 /* Elementos de contacto */
@@ -203,7 +246,7 @@ Contenedor de redes sociales
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
-    margin-top: 50px;
+    margin: 50px 0px;
 }
 
 .button{
