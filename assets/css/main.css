@@ -14,6 +14,7 @@
     --subtitle-title-gradient-right: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
     --subtitle-title-gradient-white-left: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
     --subtitle-title-gradient-white-right: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+    --white-text-shadow: 2px 2px rgb(0 0 0 / 25%);
 }
 
 html{
@@ -120,7 +121,7 @@ Contenedor de redes sociales
 }
 
 .social-media-container > div.whatsapp:hover{
-    color: var(--color-whatsapp);
+    color: var(--color-whatsapp-hover);
 }
 
 .social-media-container > div.instagram:hover{
@@ -163,10 +164,11 @@ Contenedor de redes sociales
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
     align-items: center;
-    font-size: 1.5em;
+    font-size: 2em;
     font-weight: 800;
     text-align: center;
     margin: 50px 0px;
+    text-shadow: var(--white-text-shadow);
 }
 
 .subtitle.white{
@@ -224,7 +226,7 @@ Contenedor de redes sociales
     color: white;
     width: 192px;
     padding: 10px 32px;
-    text-shadow: 2px 2px rgb(0 0 0 / 20%);
+    text-shadow: var(--white-text-shadow);
 }
 
 .featured > div > .icon {
