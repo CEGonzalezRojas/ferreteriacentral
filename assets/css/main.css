@@ -9,6 +9,10 @@
     --bg-color-gradient-footer: linear-gradient(180deg, rgba(69,188,168,.5) 0%, rgba(69,188,168,.8)  100%);
 }
 
+html{
+    font-family: "Urbanist", sans-serif;
+}
+
 body{
     margin: 0;
     background-image: url(/assets/images/background.jpg);
@@ -24,11 +28,10 @@ Contenedores. Se especifica para main como una clase para todo el conjunto de co
     justify-items: center;
     align-items: center;
     align-content: center;
-    padding: 150px 0px;
+    padding: 125px 50px;
 }
 
 .container.main{
-    min-height: 100vh;
 }
 
 .container.main::before{
@@ -40,6 +43,7 @@ Contenedores. Se especifica para main como una clase para todo el conjunto de co
     right: 0;
     background-color: var(--bg-color);
     background: var(--bg-color-gradient);
+    z-index: -1;
 }
 
 .container.footer{
@@ -55,6 +59,7 @@ Contenedores. Se especifica para main como una clase para todo el conjunto de co
     right: 0;
     background-color: var(--bg-color);
     background: var(--bg-color-gradient-footer);
+    z-index: -1;
 }
 
 /* Estilos para el logo */
@@ -106,4 +111,19 @@ Contenedor de redes sociales
 
 .social-media-container > div.phone:hover{
     color: var(--color-phone);
+}
+
+/* Parrafos y titulos */
+.title{
+    font-size: 1.5em;
+    font-weight: 800;
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.description{
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+    margin: 5px;
 }
