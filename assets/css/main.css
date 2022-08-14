@@ -3,7 +3,9 @@
     --color-facebook: #4267B2;
     --color-instagram:#F77737;
     --color-whatsapp:#25D366;
-    --color-phone:#FF5A5F;
+    --color-whatsapp-hover:#128c7e;
+    --color-phone:#009cde;
+    --color-phone-hover: #0076ba;
     --bg-color: #45bca8;
     --bg-color-75percent: rgba(69,188,168,.75);
     --bg-color-gradient: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(69,188,168,.75) 100%);
@@ -186,11 +188,89 @@ Contenedor de redes sociales
     align-items: center;
     font-size: 1.5em;
     height: 64px;
-    border-radius: 64px;
 }
 
 .featured > div > .text {
     font-size: 1.2em;
     font-weight: 600;
     padding-right: 32px;
+}
+
+/* Elementos de contacto */
+.buttons-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.button{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    color: white;
+    padding: 10px 32px;
+    border-radius: 16px;
+    cursor: pointer;
+    box-shadow: 5px 5px rgb(0,0,0,.1);
+    border: 2px solid rgba(255,255,255,1);
+    overflow: hidden;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+}
+
+.button:hover{
+    transform: translate(0px,-2px);
+    box-shadow: 5px 7px rgb(0,0,0,.1);
+}
+
+.button > .icon{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    height: 64px;
+}
+
+.button > .text{
+    display: grid;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.button > .text > :last-child{
+    font-size: 1.5em;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.button.whatsapp::before{
+    background-color: var(--color-whatsapp);
+}
+
+.button.whatsapp:hover::before{
+    background-color: var(--color-whatsapp-hover);
+}
+
+.button.phone::before{
+    background-color: var(--color-phone);
+}
+
+.button.phone:hover::before{
+    background-color: var(--color-phone-hover);
 }
