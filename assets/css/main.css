@@ -24,7 +24,12 @@ html{
 
 body{
     margin: 0;
-    background-image: url(/assets/images/background.jpg);
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+body.ready{
+    opacity: 1;
 }
 
 /*
@@ -89,12 +94,17 @@ Contenedores. Se especifica para main como una clase para todo el conjunto de co
 
 /* Estilos para el logo */
 .logo{
-    background-image: url(/assets/images/logotipo.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     width: 512px;
     height: 424px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.logo.ready{
+    opacity: 1;
 }
 
 /*
