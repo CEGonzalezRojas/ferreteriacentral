@@ -50,6 +50,10 @@ Contenedores. Se especifica para main como una clase para todo el conjunto de co
     padding: 0px 50px;
 }
 
+.container > *:not(.subtitle){
+    max-width: 900px
+}
+
 .container:first-child{
     padding-top: 125px;
     padding-bottom: 125px;
@@ -194,7 +198,7 @@ Contenedor de redes sociales
 .subtitle{
     display: grid;
     position: relative;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: minmax(100px,auto) 1fr minmax(100px,auto);
     gap: 20px;
     align-items: center;
     font-size: 2em;
@@ -244,6 +248,14 @@ Contenedor de redes sociales
     margin: 5px;
 }
 
+.description.white{
+    color: white;
+}
+
+.description.white.shadow{
+    text-shadow: var(--white-text-shadow);
+}
+
 /* Destacados */
 .featured{
     display: grid;
@@ -272,7 +284,6 @@ Contenedor de redes sociales
 
 .featured > div > .text {
     font-size: 1em;
-    font-weight: 600;
     text-align: center;
 }
 
@@ -398,6 +409,7 @@ Contenedor de redes sociales
 /* FullRap */
 .full-rap{
     display: grid;
+    margin-top: 50px;
 }
 
 .full-rap-logo{
@@ -429,7 +441,6 @@ Contenedor de redes sociales
 
 .full-rap > .description{
     color: white;
-    font-size: 1.5em;
     text-shadow: var(--white-text-shadow);
     max-width: 800px;
 }
