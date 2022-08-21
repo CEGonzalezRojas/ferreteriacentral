@@ -395,6 +395,51 @@ Contenedor de redes sociales
     content: none;
 }
 
+/* FullRap */
+.full-rap{
+    display: grid;
+}
+
+.full-rap-logo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    color: white;
+    text-shadow: var(--white-text-shadow);
+}
+
+.full-rap-logo > .text{
+    display: grid;
+    text-align: right;
+    font-weight: bold;
+}
+
+.full-rap-logo > .text > span:nth-child(1){
+    font-size: 3.8em;
+}
+
+.full-rap-logo > .text > span:nth-child(2){
+    font-size: 4.5em;
+    margin-top: -40px;
+}
+
+.full-rap-logo > .icon{
+    font-size: 6em;
+}
+
+.full-rap > .description{
+    color: white;
+    font-size: 1.5em;
+    text-shadow: var(--white-text-shadow);
+    max-width: 800px;
+}
+
+.full-rap > .description > .whatsapp{
+    color: var(--color-whatsapp-hover);
+    text-shadow: none;
+    text-decoration: underline;
+}
+
 /* Responsivo */
 @media(max-width: 960px){
 
@@ -465,9 +510,9 @@ Contenedor de redes sociales
         grid-template-columns: 16px 1fr 16px;
     }
 
-}
-
-@media(max-width: 600px){
+    .full-rap > .description{
+        font-size: 1.2em;
+    }
 
     .button > .text > :last-child{
         font-size: 1.2em;
@@ -488,7 +533,7 @@ Contenedor de redes sociales
     .container.footer{
         font-size: 0.8em;
     }
-    
+
 }
 
 @media(max-width: 450px){
