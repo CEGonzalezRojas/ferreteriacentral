@@ -16,6 +16,7 @@
     --subtitle-title-gradient-white-right: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
     --white-text-shadow: 2px 2px rgb(0 0 0 / 25%);
     --black-text-shadow: 2px 2px rgb(255 255 255 / 40%);
+    --blue-color: #3674b7;
 }
 
 html{
@@ -51,7 +52,7 @@ Contenedores. Se especifica para main como una clase para todo el conjunto de co
 }
 
 .container > *:not(.subtitle){
-    max-width: 900px
+    max-width: 900px;
 }
 
 .container:first-child{
@@ -216,14 +217,14 @@ Contenedor de redes sociales
     content: "";
     height: 4px;
     border-radius: 4px;
-    background-color: black;
+    background-color: var(--blue-color);
 }
 
 .subtitle.white::before, .subtitle.white::after{
     content: "";
     height: 4px;
     border-radius: 4px;
-    background-color: white;
+    background-color: var(--blue-color);
 }
 
 .subtitle::before{
@@ -437,6 +438,7 @@ Contenedor de redes sociales
 
 .full-rap-logo > .icon{
     font-size: 6em;
+    color: var(--blue-color);
 }
 
 .full-rap > .description{
@@ -449,6 +451,7 @@ Contenedor de redes sociales
     color: var(--color-whatsapp-hover);
     text-shadow: none;
     text-decoration: underline;
+    font-weight: bold;
 }
 
 /* Responsivo */
@@ -559,6 +562,22 @@ Contenedor de redes sociales
 
     .button > .text > :last-child{
         font-size: 1em;
+    }
+
+    .social-media-container > div.whatsapp{
+        color: var(--color-whatsapp-hover);
+    }
+    
+    .social-media-container > div.instagram{
+        color: var(--color-instagram);
+    }
+    
+    .social-media-container > div.facebook{
+        color: var(--color-facebook);
+    }
+    
+    .social-media-container > div.phone{
+        color: var(--color-phone);
     }
     
 }
