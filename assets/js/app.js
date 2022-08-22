@@ -11,6 +11,9 @@ import LazyLoad from "./lazyLoad.js";
 
       // Activar el logo
       this.LazyLoadImages();
+
+      // Carrusel de marcas
+      this.BrandCarousel();
     }
 
     /**
@@ -34,6 +37,35 @@ import LazyLoad from "./lazyLoad.js";
           }
         );
 
+    }
+
+    /**
+     * Genera el carrusel para las marcas
+     */
+    BrandCarousel(){
+      $(document).ready(function() {
+        $('.logo-carousel').slick({
+          slidesToShow: 6,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 1000,
+          arrows: true,
+          arrowsLabel: false,
+          dots: false,
+          pauseOnHover: false,
+          responsive: [{
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 4
+            }
+          }, {
+            breakpoint: 520,
+            settings: {
+              slidesToShow: 2
+            }
+          }]
+        });
+      });
     }
   }
 
