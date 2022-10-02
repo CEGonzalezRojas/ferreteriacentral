@@ -39,9 +39,10 @@
       rel="stylesheet"
     />
     <link href="/assets/css/fontawesome/css/all.min.css" rel="stylesheet" />
+    <!-- Required Core stylesheet -->
+    <link rel="stylesheet" href="/node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="/node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
     <!-- Slick Slider CSS -->
-    <link rel="stylesheet" type="text/css" href="/assets/js/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="/assets/js/slick/slick-theme.css"/>
     <link href="/assets/css/slider.css" rel="stylesheet" />
     <link href="/assets/css/main.css" rel="stylesheet" />
   </head>
@@ -117,17 +118,18 @@
     <div class="container others brands">
       <div class="subtitle white">Trabajamos con estas marcas</div>
       <div class="row">
-        <div class="brand-container">
-          <section class="logo-carousel slider">
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image1.png"></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image2.png"></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image3.png"></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image4.png"></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image5.png"></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image6.png"></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image7.png"></div>
-            <div class="slide"><img src="https://raw.githubusercontent.com/solodev/infinite-logo-carousel/master/images/image8.png"></div>
-          </section>
+        <div class="glide">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              <li class="glide__slide"><img src="/assets/images/logos/3m.png"></li>
+              <li class="glide__slide"><img src="/assets/images/logos/blackanddecker.png"></li>
+              <li class="glide__slide"><img src="/assets/images/logos/bticino.png"></li>
+              <li class="glide__slide"><img src="/assets/images/logos/legrand.png"></li>
+              <li class="glide__slide"><img src="/assets/images/logos/sika.png"></li>
+              <li class="glide__slide"><img src="/assets/images/logos/stanley.png"></li>
+              <li class="glide__slide"><img src="/assets/images/logos/truper.png"></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -160,10 +162,7 @@
       <div class="phone"><a href="tel:233146348"><i class="fa-solid fa-square-phone fa-3x"></i></a></div>
     </div>
     <div class="body-bg"></div>
-     <!-- Slick Slider JS -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="/assets/js/slick/slick.min.js"></script>
+    <script src="/node_modules/@glidejs/glide/dist/glide.min.js"></script>
     <script type="module" src="/assets/js/app.js"></script>
   </body>
 </html>
