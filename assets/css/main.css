@@ -454,6 +454,11 @@ Contenedor de redes sociales
     font-weight: bold;
 }
 
+/* Brands */
+.container.brands{
+    overflow: hidden;
+}
+
 /* Responsivo */
 @media(max-width: 960px){
 
@@ -462,9 +467,7 @@ Contenedor de redes sociales
     }
 
     .container.map > iframe{
-        width: 100%;
-        border: none;
-        border-radius: 0;
+        width: 90%;
         box-shadow: 0px 10px rgba(0,0,0,.2);
     }
 
