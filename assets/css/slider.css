@@ -4,5 +4,6 @@
 }
 
 .glide__slide img{
-  width: 100%;
+  width: 128px;
+  /*width: 100%;*/
 }

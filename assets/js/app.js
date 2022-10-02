@@ -37,6 +37,12 @@ import LazyLoad from "./lazyLoad.js";
           }
         );
 
+        // Logos marcas
+        const brandsLogos = document.querySelectorAll(".glide__slide > img");
+        for(const bLogo of brandsLogos.values()){
+          this.lazyLoad.observe( bLogo.dataset.url, bLogo, "img");
+        }
+
     }
 
     /**
