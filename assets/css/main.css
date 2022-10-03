@@ -459,6 +459,10 @@ Contenedor de redes sociales
     overflow: hidden;
 }
 
+.container.brands > .subtitle {
+    max-width: 100vw;
+}
+
 /* Responsivo */
 @media(max-width: 960px){
 
