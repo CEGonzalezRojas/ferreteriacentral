@@ -291,7 +291,7 @@ Contenedor de redes sociales
 /* Elementos de contacto */
 .buttons-container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 40px;
     margin: 50px 0px;
 }
